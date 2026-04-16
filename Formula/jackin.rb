@@ -13,7 +13,7 @@ class Jackin < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.0/jackin_darwin_amd64.tar.gz"
-      sha256 "806d28f331c938c2c39ceb8c5f4c719e2ac9e38585c678263c426aa33432969f"
+      sha256 "cc7ce2c41c5ff6cc2dd5fa438ddbe912a528a771742a33c200ca0241b776a171"
 
       define_method(:install) do
         bin.install "jackin"
@@ -21,7 +21,7 @@ class Jackin < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.0/jackin_darwin_arm64.tar.gz"
-      sha256 "9b4df401d179e0c5b410937176ff44676c26c9a004ffae8e09a4a7318981aeb1"
+      sha256 "7fa11372f364f7e4182ac7715cd08d86c6c7c153d011c7b0d5f2d0240445bd52"
 
       define_method(:install) do
         bin.install "jackin"
@@ -32,14 +32,14 @@ class Jackin < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.0/jackin_linux_amd64.tar.gz"
-      sha256 "93e787891f6d57a8cb7a8bf522abe2d2bd7534cb76c62087e5ff7f0f35d972a5"
+      sha256 "b34967fffd2bbf8f9f0f08846513eb64d6ed70767c54206da05ce1367f0660ce"
       define_method(:install) do
         bin.install "jackin"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.0/jackin_linux_arm64.tar.gz"
-      sha256 "46960ecff4fb0015f5ff08b5e2e379e75177e5947149145e605d4807a703b212"
+      sha256 "b71610bff7c9545b7349822dffb012efb1edee1dca357798e25660163463198d"
       define_method(:install) do
         bin.install "jackin"
       end
