@@ -5,23 +5,23 @@
 class Jackin < Formula
   desc "tmux-native multi-agent swarm orchestrator"
   homepage "https://github.com/AdriaanVE/jack-in"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.0/jackin_darwin_amd64.tar.gz"
-      sha256 "0f964d3ba21291db9ae8213e3b3db2d057941b6cafb1bfddaf13ec77b9fb2e01"
+      url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.1/jackin_darwin_amd64.tar.gz"
+      sha256 "6d67582370b99e83311101de0cec52f981dcd12e38e79740810178a213f56132"
 
       define_method(:install) do
         bin.install "jackin"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.0/jackin_darwin_arm64.tar.gz"
-      sha256 "79b9e849f89b453ed423e4af70d9b124a804feb80a03c4e9ec68e20dbc9ca507"
+      url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.1/jackin_darwin_arm64.tar.gz"
+      sha256 "646d7a10606fdf571343c6b1dd3a6ce56f0416e318fa58348d20828029b7411d"
 
       define_method(:install) do
         bin.install "jackin"
@@ -31,15 +31,15 @@ class Jackin < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.0/jackin_linux_amd64.tar.gz"
-      sha256 "a74422aae8e29e528728324d8f7d6ed1acffe18841bb21fd230598c22cf17f2d"
+      url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.1/jackin_linux_amd64.tar.gz"
+      sha256 "6888fffff0698e5e9708f17dbc8b13273daa9ac9df1982c2c86748f58f064a8b"
       define_method(:install) do
         bin.install "jackin"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.0/jackin_linux_arm64.tar.gz"
-      sha256 "ee59af73f7e6f09a27cfe58e851dc1bb0a307869fc3257355d9df83cab85da96"
+      url "https://github.com/AdriaanVE/jack-in/releases/download/v0.1.1/jackin_linux_arm64.tar.gz"
+      sha256 "49f33d025f99812a98ac8a1f8b64566f89bb0215c6a9df7bcfd94782230d863b"
       define_method(:install) do
         bin.install "jackin"
       end
